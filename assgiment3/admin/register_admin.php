@@ -53,3 +53,18 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
+<body>
+   <?php include '../components/admin_header.php' ?>
+
+   <section class="form-container">
+   <form action="" method="POST">
+      <h3>register new</h3>
+      <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="password" name="cpass" maxlength="20" required placeholder="confirm your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
+      <input type="submit" value="register now" name="submit" class="btn">
+   </form>
+
+   <script src="../js/admin_script.js"></script>
+   </section>
+</body>

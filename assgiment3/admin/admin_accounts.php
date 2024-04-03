@@ -32,6 +32,42 @@ if(isset($_GET['delete'])){
    <link rel="stylesheet" href="../css/admin_style.css">
    </head>
 <body>
+<?php include '../components/admin_header.php' ?>
 
+<section class="accounts">
+   <h1 class="heading">admins account</h1>
+   <div class="box-container">
+      <div class="box">
+         <p>register new admin</p>
+         <a href="register_admin.php" class="option-btn">register</a>
+      </div>
+      <?php
+      $select_account = $conn ->prepare("SELECT * FROM `admin`");
+      $select_account -> execute();
+      if($select_account -> rowCount() > 0){
+         while($row = $select_account -> fetch(PDO::FETCH_ASSOC)){
+            ?>
+            <div class="box">
+               <p>admin id :<span><?= $fetch_accounts['id'];?></span>
+               <p>username : <span><?= $fetch_accounts['name'];?></p>
+               <div class="flex-btn">
+                  <a href="admin_accounts.php?delete=<?= $fetch_accounts['id'];?>"class="delete-btn"onclick="return confirm('delete this account?');">delete</a> 
+                <?php
+                if($fetch_accounts['id'] == $admin_id){
+                  echo '<a href="update_profile.php" class="option-btn">update</a>';
+                }
+                ?>
+               </div>
+               </div>
+               <?php
+         }
+      }else{
+         echo '<p class ="empty">no accounts available</p>';
+      }
+      ?>
+   </div>
+</section>
+
+<script src="../js/admin_script.js"></script>
 </body>
 </html>
