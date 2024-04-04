@@ -30,5 +30,167 @@ if(isset($_SESSION['user_id'])){
 
 </head>
 <body>
-<?php 
+<?php include 'components/user_header.php'; ?>
+<div class="heading">
+    <h3>About Us</h3>
+    <p><a href="home.php">home</a><span> / about</span></p>
+</div>
+<section class ="about">
+<div class="row">
+<div class="image">
+    <img src ="images/about-img.svg" alt ="">
+</div>
+<div class = "content">
+    <h3>Why choose us?</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, minima autem! Sunt laborum corporis ipsa nam nobis labore repellendus sit amet, cupiditate commodi hic, illo quis nostrum reprehenderit? Repellendus, quis.</p>
+    <a href="menu.html"class="btn"> our menu</a>
+</div>
+</div>
+</section>
+
+<section class="steps">
+    <h1 class="title"> simple steps</h1>
+    <div class="box">
+        <img src ="images/step-1.png"alt ="">
+        <h3>fast delivery</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam porro sunt facere illo quasi, perspiciatis sint odit dolorem amet numquam voluptates voluptatum et in sapiente. Voluptatibus saepe possimus vitae dignissimos?</p>
+    </div>
+    <div class="box">
+        <img src ="images/step-2.png"alt="">
+        <h3>enjoy food</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, quam blanditiis, quaerat ex ipsum, minima id aliquid doloribus ullam numquam recusandae voluptatem sunt aut iusto voluptatum ut quidem magni cupiditate.</p>
+    </div>
+    <div class="box">
+        <img src ="images/step-3.png"alt="">
+        <h3>choose order</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet deleniti vero exercitationem, non libero laudantium nulla illum explicabo totam excepturi accusamus et id quis! Blanditiis, illum. Pariatur iusto adipisci expedita!</p>
+</section>
+<section class="reviews">
+
+   <h1 class="title">customer's reivews</h1>
+
+   <div class="swiper reviews-slider">
+
+      <div class="swiper-wrapper">
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-1.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-2.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-3.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-4.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-5.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+         <div class="swiper-slide slide">
+            <img src="images/pic-6.png" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate eligendi laborum molestias ut earum nulla sint voluptatum labore nemo.</p>
+            <div class="stars">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>john deo</h3>
+         </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+   </div>
+
+</section>
+<?php include 'components/footer.php'; ?>
+<!-- footer section ends -->=
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+    var swiper = new Swiper(".review-slider",{
+        loop:true,
+        grabCursor: true,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable:true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1.
+            },
+            700:{
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
+    });
+    </script>
 </body>
+</html>
