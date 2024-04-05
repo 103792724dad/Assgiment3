@@ -54,9 +54,13 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-   <?php include '../components/admin_header.php' ?>
 
-   <section class="form-container">
+<?php include '../components/admin_header.php' ?>
+
+<!-- register admin section starts  -->
+
+<section class="form-container">
+
    <form action="" method="POST">
       <h3>register new</h3>
       <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
@@ -65,6 +69,27 @@ if(isset($_POST['submit'])){
       <input type="submit" value="register now" name="submit" class="btn">
    </form>
 
-   <script src="../js/admin_script.js"></script>
-   </section>
+</section>
+
+<!-- register admin section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="../js/admin_script.js"></script>
+
 </body>
+</html>

@@ -64,7 +64,6 @@ if(isset($_POST['update'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
-
 <body>
 
 <?php include '../components/admin_header.php' ?>
